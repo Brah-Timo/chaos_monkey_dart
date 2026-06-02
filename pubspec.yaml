@@ -1,0 +1,40 @@
+name: chaos_monkey_dart
+description: >
+  A Flutter/Dart chaos engineering package that injects controlled failures (network delays, crashes, memory/CPU stress, data corruption) to test app resilience in staging environments.
+
+
+version: 1.0.0
+homepage: https://github.com/Brah-Timo/chaos_monkey_dart
+repository: https://github.com/Brah-Timo/chaos_monkey_dart
+issue_tracker: https://github.com/Brah-Timo/chaos_monkey_dart/issues
+documentation: https://github.com/Brah-Timo/chaos_monkey_dart/tree/main/doc
+
+funding:
+  - https://github.com/sponsors/Brah-Timo
+
+topics:
+  - testing
+  - chaos-engineering
+  - fault-injection
+  - resilience
+  - staging
+
+screenshots:
+  - description: Chaos Monkey console output example
+    path: assets/images/chaos_monkey_dart.jpg
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  meta: ^1.9.0
+  logging: ^1.2.0
+
+dev_dependencies:
+  fake_async: ^1.3.1
+  test: ^1.24.0
+  very_good_analysis: ^5.1.0
+
+# Note: http, dio, sqflite, path_provider are OPTIONAL peer dependencies.
+# Users add them to their own pubspec.yaml. The interceptors are gated
+# behind conditional imports to avoid forcing unnecessary dependencies.

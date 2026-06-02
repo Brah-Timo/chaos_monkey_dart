@@ -1,0 +1,32 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "example/**"           # Example files use slightly relaxed rules
+  errors:
+    # Treat doc issues as warnings, not errors, during local dev
+    missing_required_param: error
+    dead_code: warning
+
+linter:
+  rules:
+    # We intentionally use print() in ConsoleReporter and example files.
+    avoid_print: false
+
+    # Public API must be documented — enforced package-wide.
+    public_member_api_docs: true
+
+    # Prefer const constructors wherever possible.
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+
+    # Naming
+    file_names: true
+    non_constant_identifier_names: true
+
+    # Safety
+    always_declare_return_types: true
+    avoid_dynamic_calls: true
+    cast_nullable_to_non_nullable: true
